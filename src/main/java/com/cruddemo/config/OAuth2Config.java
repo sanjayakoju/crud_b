@@ -48,7 +48,7 @@ public class OAuth2Config {
                 .authorizeHttpRequests((authorizeRequests) ->
                         authorizeRequests
                                 .requestMatchers("/login", "/auth/**", "/oauth2/**").permitAll()
-                                .anyRequest().authenticated()
+                                .anyRequest().permitAll()
                 )
                 .oauth2Login(o -> o
                         .authorizationEndpoint(authorization -> authorization
